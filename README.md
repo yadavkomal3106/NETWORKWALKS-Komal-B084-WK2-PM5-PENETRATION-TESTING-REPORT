@@ -1,11 +1,7 @@
-
-# Week 2 – Penetration Testing: Footprinting, OSINT & Network Scanning
-
-**Cybersecurity & Ethical Hacking Internship | Networkwalks**
-
+# 🛡️ Week 2 – Penetration Testing: Footprinting, OSINT & Network Scanning
 ---
 
-## 1. Project Overview
+## 📌 Project Overview
 
 This repository documents the practical work completed during **Week 2** of my Cybersecurity and Ethical Hacking internship at Networkwalks.
 
@@ -17,7 +13,7 @@ The primary objective of this week's activities was to understand how cybersecur
 
 These exercises helped me understand how information gathering and network discovery contribute to the initial stages of a penetration testing engagement.
 
-## 2. Objectives
+## 🎯 Objectives
 
 The main objectives of this week's practical activities were:
 
@@ -32,7 +28,7 @@ The main objectives of this week's practical activities were:
 - Understand how network topology helps visualize connected devices.
 - Document observations, potential security implications, and recommendations.
 
-## 3. Scope and Authorization
+## 🔐 Scope and Authorization
 
 All activities were performed for educational purposes within the following scope:
 
@@ -46,7 +42,7 @@ All activities were performed for educational purposes within the following scop
 
 No exploitation, unauthorized access, or vulnerability validation was performed during these exercises.
 
-## 4. Tools and Technologies Used
+## 🛠️ Tools and Technologies Used
 
 The following tools were used during the practical activities:
 
@@ -64,9 +60,9 @@ The following tools were used during the practical activities:
 | Bash/Linux commands | Used to inspect local network configuration and routing information |
 | Windows | Host operating system used during the local network exercise |
 
-## 5. Activities Performed
+## 🔍 Activities Performed
 
-### 5.1 Footprinting and Reconnaissance
+### 1. Footprinting and Reconnaissance
 
 The first activity involved performing footprinting and reconnaissance against `networkwalks.com` using six Kali Linux tools.
 
@@ -87,7 +83,7 @@ Purpose:
 - Identify the registered name servers.
 - Review domain status and DNSSEC information.
 
-Observation:
+**Observation:**
 
 The WHOIS lookup returned registration details, including GoDaddy as the registrar, HostGator name servers, domain status information, and an unsigned DNSSEC status.
 
@@ -105,7 +101,7 @@ Purpose:
 - Identify frameworks, plugins, and other visible components.
 - Observe redirects and server-related information.
 
-Observation:
+**Observation:**
 
 WhatWeb identified Apache as the web server and detected WordPress, WP Download Manager, jQuery, and Bootstrap. It also returned information about the website's public-facing infrastructure.
 
@@ -122,7 +118,7 @@ Purpose:
 - Understand how DNS translates domain names into network addresses.
 - Verify the IP information returned by other reconnaissance tools.
 
-Observation:
+**Observation:**
 
 The DNS lookup resolved the domain to an IP address. The result was consistent with the address identified during the WhatWeb scan.
 
@@ -140,7 +136,7 @@ Purpose:
 - Examine server and caching information.
 - Observe exposed technical details and security-related headers.
 
-Observation:
+**Observation:**
 
 The server returned an HTTP 200 OK response. The headers revealed Apache server information, a WordPress REST API link, and caching-related details.
 
@@ -159,7 +155,7 @@ Purpose:
 - Identify the WAF technology when detectable.
 - Understand the role of WAFs in filtering suspicious web traffic.
 
-Observation:
+**Observation:**
 
 Wafw00f identified ModSecurity (SpiderLabs) as the WAF technology associated with the website.
 
@@ -177,11 +173,11 @@ Purpose:
 - Retrieve A, MX, NS, SOA, TXT, and SRV records.
 - Examine DNS-related infrastructure information.
 
-Observation:
+**Observation:**
 
 DNSRecon returned multiple DNS records, including name server, mail server, A, TXT, and SRV records. It also exposed BIND version information and reported no answer to its DNSSEC query.
 
-### 5.2 Passive OSINT Using theHarvester
+### 2. Passive OSINT Using theHarvester
 
 The second activity focused on Open-Source Intelligence (OSINT) using **theHarvester version 4.11.1**.
 
@@ -201,7 +197,7 @@ Purpose:
 - Search the selected public source for information associated with the domain.
 - Understand how theHarvester collects information from search engines.
 
-Observation:
+**Observation:**
 
 The scan completed but did not return IP addresses, email addresses, people, or hosts in this run.
 
@@ -217,7 +213,7 @@ Purpose:
 - Query all supported sources available in the tool.
 - Understand how different OSINT providers contribute to information gathering.
 
-Observation:
+**Observation:**
 
 Several sources displayed missing API key messages because the required API credentials were not configured in the tool's API key configuration file:
 
@@ -227,7 +223,7 @@ Several sources displayed missing API key messages because the required API cred
 
 This exercise helped me understand that some OSINT integrations require API keys and that the results depend on the availability and configuration of individual data sources.
 
-### 5.3 Network Scanning and Discovery Using Zenmap
+### 3. Network Scanning and Discovery Using Zenmap
 
 The third activity involved identifying active devices on my own local network using **Zenmap**, the graphical interface of Nmap.
 
@@ -248,7 +244,7 @@ Purpose:
 - Identify the default gateway.
 - Determine the local network range.
 
-Observed configuration:
+**Observed Configuration:**
 
 | Network Detail | Value |
 |---|---|
@@ -273,7 +269,7 @@ Purpose:
 - Collect available MAC address information.
 - Understand which devices are responding to network discovery.
 
-Observation:
+**Observation:**
 
 The scan checked 256 IP addresses and completed in approximately 2.99 seconds.
 
@@ -295,7 +291,7 @@ Purpose:
 
 The generated topology and Zenmap screenshots are included in the evidence section.
 
-## 6. Key Observations and Potential Security Implications
+## 📊 Key Observations and Potential Security Implications
 
 The exercises produced several observations that demonstrate why reconnaissance is important in security assessments.
 
@@ -311,7 +307,7 @@ The exercises produced several observations that demonstrate why reconnaissance 
 
 **Note:** These are observations and potential security implications, not confirmed vulnerabilities. Further authorized security testing would be required to establish whether any issue is exploitable or creates an actual security weakness.
 
-## 7. Recommendations
+## 💡 Recommendations
 
 Based on the observations collected during these activities, the following improvements were identified:
 
@@ -327,7 +323,7 @@ Based on the observations collected during these activities, the following impro
 10. **Maintain network documentation:** Keep network topology and device records updated.
 11. **Conduct authorized security assessments:** Ensure all reconnaissance, scanning, and testing activities remain within an approved scope.
 
-## 8. Skills and Learning Outcomes
+## 📚 Skills and Learning Outcomes
 
 Through these practical exercises, I gained an understanding of:
 
@@ -346,7 +342,7 @@ Through these practical exercises, I gained an understanding of:
 - Documenting technical observations and recommendations.
 - The importance of authorization and ethical boundaries in cybersecurity.
 
-## 9. Repository Structure
+## 📁 Repository Structure
 
 The repository is organized to keep the main documentation and supporting evidence easy to access.
 
@@ -375,7 +371,7 @@ week2-penetration-testing/
 
 The screenshots correspond to the evidence figures included in the original internship report. File names may be adjusted to match the actual uploaded image files.
 
-## 10. Documentation and Evidence
+## 📄 Documentation and Evidence
 
 The complete Week 2 practical report is available in:
 
@@ -390,7 +386,7 @@ It contains:
 
 The `screenshots/` directory contains individual evidence images for easier review.
 
-## 11. Important Disclaimer
+## ⚠️ Important Disclaimer
 
 This repository is intended strictly for educational and cybersecurity learning purposes.
 
@@ -400,7 +396,7 @@ No exploitation, unauthorized access, or vulnerability validation was performed 
 
 The observations documented here should not be interpreted as proof of exploitable vulnerabilities. Always obtain appropriate authorization before performing reconnaissance, scanning, or security testing on any system or network.
 
-## 12. Author
+## 👩‍💻 Author
 
 **Komal**  
 Cybersecurity & Ethical Hacking Intern  
@@ -411,4 +407,5 @@ Cybersecurity | Ethical Hacking | Penetration Testing | Footprinting | OSINT | N
 
 ---
 
-*Week 2 Internship Documentation – Footprinting, OSINT & Network Scanning*
+*Week 2 Internship Documentation – Footprinting, OSINT & Network Scanning*  
+
